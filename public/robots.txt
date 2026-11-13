@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.druga-brzina.si/sitemap.xml

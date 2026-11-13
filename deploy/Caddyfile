@@ -1,0 +1,13 @@
+# Primer za Caddy na Hetzner strežniku (/etc/caddy/Caddyfile)
+druga-brzina.si {
+	redir https://www.druga-brzina.si{uri} permanent
+}
+
+www.druga-brzina.si {
+	root * /var/www/druga-brzina
+	encode zstd gzip
+	file_server
+
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=31536000, immutable"
+}
